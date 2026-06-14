@@ -13,7 +13,8 @@ async def command_start(message: types.Message):
         '/random - Случайный факт\n'
         '/gpt - Задать вопрос\n'
         '/talk - Поговорить со сказочным персонажем\n'
-        '/quiz - Викторина'
+        '/quiz - Викторина\n'
+        '/resume - Помощь с созданием резюме'
     )
 
 @router.message(Command('random'))
