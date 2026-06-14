@@ -8,7 +8,7 @@ from handlers import basic
 from handlers import gpt
 from handlers import talk
 from handlers import quiz
-from handlers import resume_handler
+from handlers import resume
 
 async def main():
 
@@ -26,7 +26,7 @@ async def main():
     dp.include_router(gpt.router)
     dp.include_router(talk.router)
     dp.include_router(quiz.router)
-    dp.include_router(resume_handler.router)
+    dp.include_router(resume.router)
 
     print("Диспетчер запущен, бот готов к работе")
     await dp.start_polling(bot, gpt=gpt_service)
