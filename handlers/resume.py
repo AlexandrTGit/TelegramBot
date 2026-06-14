@@ -90,7 +90,7 @@ async def process_skills(message: types.Message, state: FSMContext, gpt: ChatGpt
 
     result = await gpt.add_message(final_text_for_gpt)
 
-    kb = build_dynamic_keyboard({"search_jobs": "🔍 Найти вакансии под это резюме"})
+    kb = build_dynamic_keyboard({"search_jobs": "Найти вакансии под это резюме"})
     await msg.edit_text(result, reply_markup=kb)
 
     await state.clear()
